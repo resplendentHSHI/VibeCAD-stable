@@ -1,0 +1,42 @@
+{
+    "name": "onshape-mcp-server",
+    "version": "0.0.1",
+    "description": "MCP server for Onshape",
+    "license": "MIT",
+    "author": "Blamy",
+    "homepage": "https://github.com/blamy/onshape-mcp-server",
+    "bugs": "https://github.com/blamy/onshape-mcp-server/issues",
+    "type": "module",
+    "bin": {
+        "onshape-mcp-server": "dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc && shx chmod +x dist/*.js",
+        "prepare": "npm run build",
+        "watch": "tsc --watch"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "1.10.1",
+        "diff": "^5.1.0",
+        "dotenv": "^17.0.0",
+        "glob": "^10.3.10",
+        "minimatch": "^10.0.1",
+        "node-fetch": "^2.7.0",
+        "zod": "^3.23.8",
+        "zod-to-json-schema": "^3.23.5"
+    },
+    "devDependencies": {
+        "@types/diff": "^5.0.9",
+        "@types/minimatch": "^5.1.2",
+        "@types/node": "^22",
+        "@types/node-fetch": "^2.6.12",
+        "shx": "^0.3.4",
+        "typescript": "^5.3.3"
+    }
+}
